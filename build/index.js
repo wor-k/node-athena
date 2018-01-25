@@ -25,4 +25,9 @@ function createClient(clientConfig, awsConfig) {
     return new client_1.AthenaClient(request, clientConfig);
 }
 exports.createClient = createClient;
+function createClientLambda(clientConfig, s3, athena) {
+    const request = new request_1.AthenaRequest(athena, s3);
+    return new client_1.AthenaClient(request, clientConfig);
+}
+exports.createClientLambda = createClientLambda;
 //# sourceMappingURL=index.js.map

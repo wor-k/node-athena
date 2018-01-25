@@ -36,3 +36,12 @@ export function createClient(
   const request = new AthenaRequest(athena, s3)
   return new AthenaClient(request, clientConfig)
 }
+
+export function createClientLambda(
+  clientConfig: AthenaClientConfig,
+  s3: any,
+  athena: any,
+) {
+  const request = new AthenaRequest(athena, s3)
+  return new AthenaClient(request, clientConfig)
+}

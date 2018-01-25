@@ -6,3 +6,4 @@ export interface AwsConfig {
 }
 export * from './lib/client';
 export declare function createClient(clientConfig: AthenaClientConfig, awsConfig: AwsConfig): AthenaClient;
+export declare function createClientLambda(clientConfig: AthenaClientConfig, s3: any, athena: any): AthenaClient;
